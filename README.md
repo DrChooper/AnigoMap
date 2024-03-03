@@ -9,14 +9,14 @@ This study employs GetOrganelle for the assembly of chloroplast genomes from low
 
 ## Table of Contents
 
-- [Dependencies] (#dependencies)
+- [Dependencies](#dependencies)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
 
 ## Dependencies
-Requires Get[GetOrganelle](https://github.com/Kinggerm/GetOrganelle). Short instructions for install is given below:
+Requires [GetOrganelle](https://github.com/Kinggerm/GetOrganelle). Short instructions for install is given below:
 ---
 ```bash
 micromamba install -c bioconda getorganelle
@@ -25,10 +25,7 @@ After installation of GetOrganelle v1.7+, please download and initialize the dat
 ```bash
 get_organelle_config.py --add embplant_pt,embplant_mt
 ```
-Requires Chloroplast annotator.
-
-https://github.com/ian-small/chloe
-
+Requires [Chloe] (https://github.com/ian-small/chloe) the Chloroplast annotator.
 
 ## Installation
 
