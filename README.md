@@ -9,13 +9,15 @@ This study employs GetOrganelle for the assembly of chloroplast genomes from low
 
 ## Table of Contents
 
+- [Dependencies] (#dependencies)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
 
-## Installation
-Requires GetOrganelle installation
+## Dependencies
+Requires Get[GetOrganelle](https://github.com/Kinggerm/GetOrganelle). Short instructions for install is given below:
+---
 ```bash
 micromamba install -c bioconda getorganelle
 ```
@@ -23,10 +25,25 @@ After installation of GetOrganelle v1.7+, please download and initialize the dat
 ```bash
 get_organelle_config.py --add embplant_pt,embplant_mt
 ```
+Requires Chloroplast annotator.
 
+https://github.com/ian-small/chloe
+
+
+## Installation
+
+
+### Test suite
 The repository contains 2 test files in the test_files folder that can be used for testing the assembly pipeline:
 ```bash
-get_organelle_from_reads.py -1 test/Arabidopsis_simulated.1.fq.gz -2 test/Arabidopsis_simulated.2.fq.gz -t 1 -o test/Arabidopsis_simulated.plastome -F embplant_pt -R 10
+bash assembler_test.sh
+```
+For testing the Chloe annotator 
+```bash
+bash annotator_test.sh
 ```
 
 ## Assembly
+
+## Authors
+- [DrChooper](https://github.com/drchooper): Code development
