@@ -25,9 +25,17 @@ if [ -f "$folder_path/$log_file" ]; then
     if grep -q "$target_string" "$folder_path/$log_file"; then
         echo "
         =======================================================
-        Test succeessful. The test folder will be deleted.
+        Test successful
         ======================================================="
-        rm -r test
+         # Prompt user before deleting the 'test' folder
+        read -p "Do you want to delete the 'test' folder? (y/n): " delete_confirmation
+
+        if [ "$delete_confirmation" == "y" ]; then
+            rm -r test
+            echo "'test' folder deleted successfully."
+        else
+            echo "You chose not to delete the 'test' folder."
+        fi
     else
         echo "assembly failed."
     fi
